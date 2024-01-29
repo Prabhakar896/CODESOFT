@@ -1,0 +1,39 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class numbergame {
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+		int attempt = 1 ; 
+		int maxattempt = 10 ;
+		int lowerbound = 1 ;
+		int upperbound = 100;
+		int ans = (int)(Math.random()* ((upperbound - lowerbound) + 1 )) + lowerbound;
+		System.out.println("-------------------------------WELCOME TO THE NUMBER GAME-------------------------------------");
+		System.out.println("GUESS A NUMBER BETWEEN " + lowerbound + " to " + upperbound);
+		for(int i = attempt ; i <= maxattempt ; i++)
+		{
+			System.out.print4("ATTEMPT " + i + " : " );
+			int guess = scan.nextInt();
+			if(ans == guess)
+			{
+				System.out.println("CONGRATULATIONS YOU WON THE GAME \n ");
+				break;
+			}
+			else if(guess<ans)
+			{
+				System.out.println("TOO LOW TRY AGAIN \n");
+			}
+			else
+			{
+				System.out.println("TOO HIGH TRY AGAIN \n");
+			}
+			if(i==maxattempt)
+			{
+				System.out.println("SORRY , YOUR ATTEMPTS ARE OVER THE CORRECT NUMBER IS " + ans );
+			}
+		}
+	}
+
+}
