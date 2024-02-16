@@ -1,46 +1,42 @@
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new
-                Scanner(System.in);
-        System.out.println("Enter the Marks for Sub 1");
-        int subject1Mark = scanner.nextInt();
-        System.out.println("Enter the Mark for Sub 2");
-        int subject2Mark = scanner.nextInt();
-        System.out.println("Enter the Mark for Sub 3");
-        int subjet3Mark = scanner.nextInt();
-        System.out.println("Enter the Mark for Sub 4");
-        int subject4Mark = scanner.nextInt();
-        System.out.println("Enter the Mark for Sub 5");
-        int subject5mark = scanner.nextInt();
-        int totalMark = subject1Mark + subject2Mark + subjet3Mark + subject4Mark + subject5mark;
-        int averageMark =  totalMark / 5;
-        char grade;
-       if(averageMark/10 == 10)
-       {
-           grade = 'A';
-       }
-       else if(averageMark/10 == 9)
-       {
-           grade = 'B';
-       }
-          else if(averageMark/10 == 8)
-       {
-           grade = 'C';
-       }
-          else if(averageMark/10 == 9)
-       {
-           grade = 'D';
-       }
-       else{
-           grade = 'E';
-       }
-        System.out.println("Total Mark:" + totalMark);
-        System.out.println("Average Mark:" + averageMark);
-        System.out.println("Grade:" + grade);
-
-
-        scanner.close();
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+     Scanner scan = new Scanner(System.in);
+     System.out.println("Enter the Mark for sub 1 ");
+     int subjectmark1 = scan.nextInt();
+     System.out.println("Enter the Mark for sub 2 ");
+     int subjectmark2  = scan.nextInt();
+     System.out.println("Enter the Mark for sub 3 ");
+     int subjectmark3 = scan.nextInt();
+     System.out.println("Enter the Mark for sub 4 ");
+     int subjectmark4 = scan.nextInt();
+     System.out.println("Enter the Mark for sub 5 ");
+     int subjectmark5 = scan.nextInt();
+     int total=subjectmark1+subjectmark2+subjectmark3+subjectmark4+subjectmark5;
+     int averagemark = (total/5);
+     char grade;
+     if( 90 < averagemark && averagemark<= 100)
+     {
+         grade = 'A';
+     }
+    else if(80 < averagemark && averagemark <= 90)
+    {
+        grade = 'B';
     }
-
+    else if(70 < averagemark && averagemark<= 80)
+    {
+        grade = 'C';
     }
+    else if( 60 < averagemark && averagemark <= 70)
+    {
+        grade = 'D';
+    }
+    else{
+        grade = 'E';
+    }
+    System.out.println("Total Mark: " + total);
+    System.out.println("Average: " + averagemark);
+    System.out.println("Grade: " + grade);
+    }
+}
